@@ -25,4 +25,4 @@ def check_stats():
                 "states": storage.count('State'),
                 "users": storage.count('User')
             }
-    return jsonity(stats)
+    return jsonify(stats)

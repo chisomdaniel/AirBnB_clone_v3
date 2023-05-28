@@ -16,6 +16,7 @@ def not_found(error):
     error_dict = {'error': 'Not found'}
     return make_response(jsonify(error_dict), 404)
 
+
 @app.teardown_appcontext
 def close_all(exception):
     '''run this function after each request'''

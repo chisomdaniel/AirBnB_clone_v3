@@ -65,11 +65,11 @@ def create_review(place_id):
         reply = 'Missing user_id'
         return make_response(jsonify(reply), 400)
 
-    user_key = "User.{}".format(place_dict['user_id'])
+    user_key = "User.{}".format(review_dict['user_id'])
     if user_key not in storage.all('User'):
         abort(404)
 
-    if 'text' not in place_dict:
+    if 'text' not in review_dict:
         reply = 'Missing text'
         return make_response(jsonify(reply), 400)
 
@@ -83,7 +83,7 @@ def create_review(place_id):
                  methods=['PUT'])
 def update_review(review_id):
     '''Update a review based on its id'''
-    key = 'Review.{}'.format(place_id)
+    key = 'Review.{}'.format(review_id)
     if key not in storage.all('Review'):
         abort(404)
 

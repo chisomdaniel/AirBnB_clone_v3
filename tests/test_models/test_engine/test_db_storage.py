@@ -42,9 +42,9 @@ class TestDBStorageDocs(unittest.TestCase):
         """Test tests/test_models/test_db_storage.py conforms to PEP8."""
         pep8s = pep8.StyleGuide(quiet=True)
         result = pep8s.check_files(['tests/test_models/test_engine/\
-test_db_storage.py'])
-        self.assertEqual(result.total_errors, 0,
-                         "Found code style errors (and warnings).")
+                    test_db_storage.py'])
+        self.assertEqual(result.total_errors, 0, "Found code \
+                         style errors (and warnings).\n")
 
     def test_db_storage_module_docstring(self):
         """Test for the db_storage.py module docstring"""
@@ -99,7 +99,7 @@ class TestFileStorage(unittest.TestCase):
 
     def test_count(self):
         """ Tests count method db storage """
-        dic = {"name": "Vecindad"}
+        dic = {"name": "Shared_space"}
         state = State(**dic)
         storage.new(state)
         dic = {"name": "Mexico", "state_id": state.id}

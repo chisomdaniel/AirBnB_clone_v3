@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+FILE=commit.json
+if test -f "$FILE"; then
+  rm "$FILE"
+else
+  touch commit.json
+fi
+git add .
+git commit -m "updated" && git push

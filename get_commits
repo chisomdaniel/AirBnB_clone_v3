@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-for i in $(seq 24); do
-  ./add_commits
-done
-
-rm ./add_commits
-rm ./get_commits

@@ -13,8 +13,8 @@ def reviews(place_id):
     '''retrieves the list of all review objects of a place'''
     all_place = storage.all('Place')
     place_key = "Place.{}".format(place_id)
-    if place in all_place:
-        reviews = all_city[place].reviews
+    if place_key in all_place:
+        reviews = all_place[place_key].reviews
         r_list = [i.to_dict() for i in reviews]
 
         return jsonify(r_list)
